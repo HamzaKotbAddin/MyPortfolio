@@ -5,21 +5,22 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 import Link from "next/link";
 import MagicButton from "./ui/MagicButton";
 import { LuAntenna } from "react-icons/lu";
+import { WavyBackground } from "./ui/wavy-background";
 
 const hero = () => {
   return (
-    <div className=" w-full min-h-screen overflow-hidden ">
+    <div className=" w-full min-h-screen relative">
       {/* Spotlights */}
       <Spotlight
-        className="absolute top-[-8rem] left-[-5rem] md:top-[-10rem] md:left-[8rem] h-[100vh] w-[100vw]"
+        className="absolute top-[-8rem] left-[5rem] md:top-[-10rem] md:left-[8rem] h-[100vh] w-full max-w-none"
         fill="white"
       />
       <Spotlight
-        className="absolute left-0 top-0 h-[80vh] w-[80vh]"
+        className="absolute left-0 top-0 h-[80vh] w-[80vh] "
         fill="purple"
       />
       <Spotlight
-        className="absolute top-[10%] left-[60%] h-[80vh] w-[50vw]"
+        className="absolute top-[10%] left-[60%] h-[80vh] w-[50vw] max-w-none"
         fill="blue"
       />
 
@@ -47,9 +48,24 @@ const hero = () => {
           words="A spark of curiosity led me to tech—now I turn ideas into solutions."
         />
         <Link href="#about">
-          <MagicButton title="About Me" icon={<LuAntenna />} posotion="right" />
+          <MagicButton
+            title="About Me"
+            icon={<LuAntenna />}
+            position="right"
+            otherClasses="mt-10"
+          />
         </Link>
       </div>
+      <WavyBackground
+        className="content-container"
+        containerClassName="main-container"
+        colors={["#1e2a78", "#3b2167", "#0f1b4c", "#2e254b", "#1a224a"]}
+        waveWidth={20}
+        backgroundFill="#0a0a20"
+        blur={5}
+        speed="slow"
+        waveOpacity={0.8}
+      />
     </div>
   );
 };

@@ -5,7 +5,7 @@ import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "../../data/globe.json";
-import * as THREE from "three"; // if not already
+import * as THREE from "three"; //
 
 declare module "@react-three/fiber" {
   interface ThreeElements {
@@ -308,3 +308,5 @@ export function genRandomNumbers(min: number, max: number, count: number) {
 
   return arr;
 }
+
+export default World;

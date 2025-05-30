@@ -1,0 +1,3 @@
+https://ui.aceternity.com/components/draggable-card
+https://ui.aceternity.com/components/background-boxes
+https://ui.aceternity.com/components/spotlight-new
