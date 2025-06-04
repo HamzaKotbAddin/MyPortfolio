@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
@@ -69,23 +70,25 @@ export function Globe({ globeConfig, data }: WorldProps) {
   const groupRef = useRef<THREE.Group>(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  const defaultProps = {
-    pointSize: 1,
-    atmosphereColor: "#ffffff",
-    showAtmosphere: true,
-    atmosphereAltitude: 0.1,
-    polygonColor: "rgba(255,255,255,0.7)",
-    globeColor: "#1d072e",
-    emissive: "#000000",
-    emissiveIntensity: 0.1,
-    shininess: 0.9,
-    arcTime: 2000,
-    arcLength: 0.9,
-    rings: 1,
-    maxRings: 3,
-    ...globeConfig,
-  };
-
+  const defaultProps = useMemo(
+    () => ({
+      pointSize: 1,
+      atmosphereColor: "#ffffff",
+      showAtmosphere: true,
+      atmosphereAltitude: 0.1,
+      polygonColor: "rgba(255,255,255,0.7)",
+      globeColor: "#1d072e",
+      emissive: "#000000",
+      emissiveIntensity: 0.1,
+      shininess: 0.9,
+      arcTime: 2000,
+      arcLength: 0.9,
+      rings: 1,
+      maxRings: 3,
+      ...globeConfig,
+    }),
+    [globeConfig]
+  );
   // Initialize globe only once
   useEffect(() => {
     if (!globeRef.current && groupRef.current) {
@@ -105,6 +108,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       emissiveIntensity: number;
       shininess: number;
     };
+    globeRef.current.hexPolygonResolution(3);
     globeMaterial.color = new Color(globeConfig.globeColor);
     globeMaterial.emissive = new Color(globeConfig.emissive);
     globeMaterial.emissiveIntensity = globeConfig.emissiveIntensity || 0.1;
@@ -120,6 +124,19 @@ export function Globe({ globeConfig, data }: WorldProps) {
   // Build data when globe is initialized or when data changes
   useEffect(() => {
     if (!globeRef.current || !isInitialized || !data) return;
+
+    import("../../data/globe.json").then((module) => {
+      const countries = module.default || module;
+
+      globeRef
+        .current!.hexPolygonsData(countries.features)
+        .hexPolygonResolution(3)
+        .hexPolygonMargin(0.7)
+        .hexPolygonColor(() => defaultProps.polygonColor);
+    });
+    const timeout = setTimeout(() => {
+      // expensive data updates
+    }, 300);
 
     const arcs = data;
     let points = [];
@@ -190,6 +207,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .ringRepeatPeriod(
         (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings
       );
+    return () => clearTimeout(timeout);
   }, [
     isInitialized,
     data,

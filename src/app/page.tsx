@@ -2,7 +2,8 @@ import { LuAntenna } from "react-icons/lu";
 import Hero from "../../components/Hero";
 import { FloatingNav } from "../../components/ui/floating-navbar";
 import Grid from "../../components/Grid";
-import { WavyBackground } from "../../components/ui/wavy-background";
+import { Suspense } from "react";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -15,8 +16,10 @@ export default function Home() {
           ]}
         />
         <Hero />
-
-        <Grid />
+        <Suspense fallback={<div className="text-white">Loading grid...</div>}>
+          <Grid />
+        </Suspense>
+        <Projects />
       </div>
     </main>
   );

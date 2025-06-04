@@ -60,3 +60,55 @@ export const gridItems = [
     spareImg: "",
   },
 ];
+
+
+
+export const Projects = [
+  {
+    id: 1,
+    title: "Green Marketplace",
+    description: "A university project for a sustainable e-commerce platform using Vite.js and Firebase, focused on eco-friendly products.",
+    link: "https://green-marketplace-513bc.web.app/", // Add link if hosted
+    image: "/marketplace.png",
+    iconLists: [
+      "Vite.js",
+      "Firebase",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    id: 2,
+    title: "Sentiment Analysis Tool",
+    description: "A sentiment analysis project using NLTK and RoBERTa to analyze text polarity and emotion.",
+    link: "https://github.com/HamzaKotbAddin/Sentiment_Analysis", // Add GitHub link if available
+    image: "/sentiment-analysis.png",
+    iconLists: [
+      "NLTK",
+      "RoBERTa",
+    ],
+  },
+  {
+    id: 3,
+    title: "AJA Space Internship",
+    description: "Contributed to front-end development using React, Next.js Designed UI in Figma and collaborated on real-world projects.",
+    link: "https://aja-space-git-main-hamzakotbaddins-projects.vercel.app/", // Add portfolio or GitHub page if you have a section for this
+    image: "/aja-space.png",
+    iconLists: [
+      "React",
+      "Next.js",
+      "Firebase",
+    ],
+  },
+  {
+    id: 4,
+    title: "To-Do List App",
+    description: "A simple and intuitive task manager built with React to help users organize their daily tasks efficiently.",
+    link: "https://todolist-one-theta.vercel.app/", // Add link if hosted or GitHub link
+    image: "/todo-app.png",
+    iconLists: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+  },
+];

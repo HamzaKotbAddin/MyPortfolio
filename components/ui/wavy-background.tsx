@@ -29,8 +29,8 @@ export const WavyBackground = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationIdRef = useRef<number>(0);
+  const [isHovering, setIsHovering] = useState(false);
 
-  // متغيرات الحجم
   let w = 0,
     h = 0,
     nt = 0;
@@ -54,7 +54,7 @@ export const WavyBackground = ({
       ctx.clearRect(0, 0, w, h);
 
       ctx.fillStyle = backgroundFill || "black";
-      ctx.globalAlpha = waveOpacity || 0.5;
+      ctx.globalAlpha = waveOpacity;
       ctx.fillRect(0, 0, w, h);
 
       const waveColors = colors ?? [
@@ -67,13 +67,15 @@ export const WavyBackground = ({
 
       nt += getSpeed();
 
+      const amplitude = isHovering ? 200 : 100; // 👈 Hover increases wave height
+
       for (let i = 0; i < 5; i++) {
         ctx.beginPath();
         ctx.lineWidth = waveWidth || 50;
         ctx.strokeStyle = waveColors[i % waveColors.length];
         for (let x = 0; x < w; x += 5) {
-          const y = noise(x / 800, 0.3 * i, nt) * 100;
-          ctx.lineTo(x, y + h * 0.5); // وسط ارتفاع الحاوية
+          const y = noise(x / 800, 0.3 * i, nt) * amplitude;
+          ctx.lineTo(x, y + h * 0.5);
         }
         ctx.stroke();
         ctx.closePath();
@@ -84,30 +86,39 @@ export const WavyBackground = ({
 
     render();
 
-    window.addEventListener("resize", () => {
+    const resizeHandler = () => {
       if (!canvas || !ctx || !containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
       w = canvas.width = rect.width;
       h = canvas.height = rect.height;
       ctx.filter = `blur(${blur}px)`;
-    });
+    };
+
+    window.addEventListener("resize", resizeHandler);
+
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
   };
 
   useEffect(() => {
-    init();
+    const cleanup = init();
     return () => {
       cancelAnimationFrame(animationIdRef.current);
+      cleanup?.();
     };
-  }, []);
+  }, [isHovering]);
 
   return (
     <div
       ref={containerRef}
       className={containerClassName}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
       style={{
         position: "relative",
         overflow: "hidden",
-        height: "150px" /* أو أي ارتفاع يناسبك */,
+        height: "150px",
       }}
     >
       <canvas

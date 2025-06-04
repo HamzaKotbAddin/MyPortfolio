@@ -1,11 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import dynamic from "next/dynamic";
 import { myGlobeConfig, myGlobeData } from "../../data/globeData";
-
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+import { CustomProgressBar } from "@/components/ui/progress";
+import { GlobeDemo } from "./GlobeDemo";
 
 import { cn } from "@/lib/utils";
 
@@ -14,9 +13,7 @@ import MagicButton from "../ui/MagicButton";
 const GridGlobe = dynamic(() => import("./GridGlobe"), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-full text-purple-700 flex items-center justify-center text-2xl text-bold">
-      Loading Globe...
-    </div>
+    <div className="w-full h-full text-purple-700 flex items-center justify-center text-2xl text-bold"></div>
   ),
 });
 
@@ -63,6 +60,24 @@ export const BentoGridItem = ({
 
   const leftLists = ["Next.js", "React.js", "TypeScript"];
   const rightLists = ["Supabase", "Tailwind CSS", "Vercel"];
+  const [showGlobe, setShowGlobe] = useState(false);
+
+  useEffect(() => {
+    if (id === 2) {
+      // Delay mounting to let Spotlight animate
+      const timeout = setTimeout(() => {
+        if ("requestIdleCallback" in window) {
+          (window as any).requestIdleCallback(() => setShowGlobe(true));
+        } else {
+          setShowGlobe(true);
+        }
+      }, 1500); // delay slightly after transition/render
+
+      return () => clearTimeout(timeout);
+    } else {
+      setShowGlobe(false); // hide if not visible
+    }
+  }, [id]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("hamza.yasin.dev@gmail.com");
@@ -127,8 +142,8 @@ export const BentoGridItem = ({
 
         {/* Globe */}
         {id === 2 && (
-          <div className="w-full h-64 mt-4 bg-black rounded-xl overflow-hidden">
-            <GridGlobe globeConfig={myGlobeConfig} data={myGlobeData} />
+          <div className="w-full h-64 mt-4 bg-black rounded-xl overflow-hidden flex flex-col justify-center px-4">
+            {showGlobe ? <GlobeDemo /> : <CustomProgressBar value={100} />}
           </div>
         )}
 

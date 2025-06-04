@@ -6,6 +6,7 @@ import Link from "next/link";
 import MagicButton from "./ui/MagicButton";
 import { LuAntenna } from "react-icons/lu";
 import { WavyBackground } from "./ui/wavy-background";
+import FluidCursor from "./ui/GradientCursor";
 
 const hero = () => {
   return (
