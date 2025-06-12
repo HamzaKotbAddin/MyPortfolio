@@ -70,11 +70,7 @@ export const Projects = [
     description: "A university project for a sustainable e-commerce platform using Vite.js and Firebase, focused on eco-friendly products.",
     link: "https://green-marketplace-513bc.web.app/", // Add link if hosted
     image: "/marketplace.png",
-    iconLists: [
-      "Vite.js",
-      "Firebase",
-      "Tailwind CSS",
-    ],
+    iconLists:["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg", "/firebase.svg", "/vite.svg",],
   },
   {
     id: 2,
@@ -83,21 +79,18 @@ export const Projects = [
     link: "https://github.com/HamzaKotbAddin/Sentiment_Analysis", // Add GitHub link if available
     image: "/sentiment-analysis.png",
     iconLists: [
-      "NLTK",
-      "RoBERTa",
+      "/python.svg",
+      "/nltk.webp",
+      "/pandas_mark.svg",
     ],
   },
   {
     id: 3,
-    title: "AJA Space Internship",
+    title: "AJA Space landing page",
     description: "Contributed to front-end development using React, Next.js Designed UI in Figma and collaborated on real-world projects.",
     link: "https://aja-space-git-main-hamzakotbaddins-projects.vercel.app/", // Add portfolio or GitHub page if you have a section for this
     image: "/aja-space.png",
-    iconLists: [
-      "React",
-      "Next.js",
-      "Firebase",
-    ],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/next.svg"],
   },
   {
     id: 4,
@@ -106,9 +99,108 @@ export const Projects = [
     link: "https://todolist-one-theta.vercel.app/", // Add link if hosted or GitHub link
     image: "/todo-app.png",
     iconLists: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
+      "/next.svg",
+      "/ts.svg",
+      "/tail.svg",
+      "/supabase.svg",
     ],
+  },
+];
+
+
+export const testimonials = [
+  {
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael Johnson",
+    title: "Director of AlphaStream Technologies",
+  },
+  {
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael Johnson",
+    title: "Director of AlphaStream Technologies",
+  },
+  {
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael Johnson",
+    title: "Director of AlphaStream Technologies",
+  },
+  {
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael Johnson",
+    title: "Director of AlphaStream Technologies",
+  },
+  {
+    quote:
+      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    name: "Michael Johnson",
+    title: "Director of AlphaStream Technologies",
+  },
+];
+
+export const companies = [
+  {
+    id: 1,
+    name: "aja space",
+    nameImg: "/aja.webp",
+  },
+  { 
+    id: 2,
+    name: "abar hail",
+    img: "/abar.webp",
+  },
+
+];
+
+export const workExperience = [
+  {
+    id: 1,
+    title: "Frontend Engineer Intern",
+    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+  {
+    id: 2,
+    title: "Mobile App Dev - JSM Tech",
+    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "/exp2.svg",
+  },
+  {
+    id: 3,
+    title: "Freelance App Dev Project",
+    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "/exp3.svg",
+  },
+  {
+    id: 4,
+    title: "Lead Frontend Developer",
+    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  },
+];
+
+export const socialMedia = [
+  {
+    id: 1,
+    img: "/git.svg",
+    link: "https://github.com/HamzaKotbAddin",
+    name: "GitHub",
+  },
+  {
+    id: 2,
+    img: "/twit.svg",
+    name: "Twitter",
+  },
+  {
+    id: 3,
+    img: "/link.svg",
+    name: "LinkedIn",
   },
 ];

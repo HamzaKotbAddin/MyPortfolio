@@ -1,21 +1,36 @@
 "use client";
+
 import { useEffect, useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
+import { useInView } from "react-intersection-observer";
 import dynamic from "next/dynamic";
-import { myGlobeConfig, myGlobeData } from "../../data/globeData";
 import { CustomProgressBar } from "@/components/ui/progress";
-import { GlobeDemo } from "./GlobeDemo";
-
 import { cn } from "@/lib/utils";
+import MagicButton from "./MagicButton";
+import { IoCopyOutline } from "react-icons/io5";
 
-import MagicButton from "../ui/MagicButton";
+const GlobeDemo = dynamic(
+  () =>
+    import("./GlobeDemo").then((mod) => ({
+      default: mod.GlobeDemo, // ← map named export to default
+    })),
+  {
+    ssr: false,
+    loading: () => <CustomProgressBar value={100} />,
+  }
+);
 
-const GridGlobe = dynamic(() => import("./GridGlobe"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full text-purple-700 flex items-center justify-center text-2xl text-bold"></div>
-  ),
-});
+export default function LazyGlobeWrapper() {
+  const { ref, inView } = useInView({ triggerOnce: true });
+  const [showGlobe, setShowGlobe] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setShowGlobe(true);
+    }
+  }, [inView]);
+
+  return <div ref={ref}>{showGlobe && <GlobeDemo />}</div>;
+}
 
 export const BentoGrid = ({
   className,
@@ -79,11 +94,16 @@ export const BentoGridItem = ({
     }
   }, [id]);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText("hamza.yasin.dev@gmail.com");
-    setCopied(true);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText("hamza.yasin.dev@gmail.com");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 5000);
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+      setCopied(false);
+    }
   };
-
   return (
     <div
       className={cn(
@@ -141,11 +161,7 @@ export const BentoGridItem = ({
         </div>
 
         {/* Globe */}
-        {id === 2 && (
-          <div className="w-full h-64 mt-4 bg-black rounded-xl overflow-hidden flex flex-col justify-center px-4">
-            {showGlobe ? <GlobeDemo /> : <CustomProgressBar value={100} />}
-          </div>
-        )}
+        {id === 2 && <GlobeDemo />}
 
         {/* Tech Stack Grid */}
         {id === 3 && (
@@ -180,6 +196,7 @@ export const BentoGridItem = ({
               icon={<IoCopyOutline />}
               position="left"
               handleClick={handleCopy}
+              copied={copied}
               otherClasses="!bg-[#161A31] rounded-md h-10"
             />
           </div>
