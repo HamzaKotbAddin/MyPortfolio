@@ -1,11 +1,9 @@
-import React, { memo, useMemo, lazy, Suspense } from "react";
+import React, { memo, useMemo } from "react";
 import { Projects } from "../data/index";
-import Link from "next/link";
 import Image from "next/image";
 import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa6";
 import { Boxes } from "./ui/background-boxes";
-import { cn } from "@/lib/utils";
 
 // Memoized project card component
 type ProjectCardProps = { item: (typeof Projects)[number] };
@@ -24,10 +22,11 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => (
           <Image
             src="/bg.png"
             alt="background"
-            fill
             className="object-cover"
             sizes="(max-width: 768px) 85vw, (max-width: 1024px) 650px, 480px"
             loading="lazy"
+            width={480}
+            height={320}
           />
         </div>
         <Image
@@ -38,8 +37,6 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => (
           className="z-10 relative w-[calc(100%-1.5rem)] h-[calc(100%-2rem)] object-cover object-top rounded-2xl shadow-2xl ring-1 ring-white/10 hover:scale-[1.02] transition-all duration-700 ease-out will-change-transform"
           sizes="(max-width: 768px) 85vw, (max-width: 1024px) 650px, 480px"
           loading="lazy"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRUf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
       </div>
 
@@ -74,6 +71,8 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => (
                 height={24}
                 className="p-1"
                 loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mP8//8/AwAI/wH+9Q2AAAAAElFTkSuQmCC"
               />
             </div>
           ))}
@@ -95,7 +94,7 @@ ProjectCard.displayName = "ProjectCard";
 // Memoized background component
 const BackgroundBoxes = memo(() => (
   <div className="absolute inset-0 z-0 w-full h-full">
-    <Boxes className="absolute inset-0 w-full h-full" />
+    <Boxes className="absolute inset-0 w-full h-full " />
   </div>
 ));
 

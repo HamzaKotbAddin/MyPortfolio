@@ -1,7 +1,7 @@
 import React from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
-import test from "node:test";
 import { companies, testimonials } from "@/data";
+import Image from "next/image";
 
 const Clients = () => {
   return (
@@ -26,7 +26,7 @@ const Clients = () => {
             company.img || company.nameImg ? (
               <div key={company.id} className="gap-2 flex md:max-w-60 max-w-32">
                 {company.img && (
-                  <img
+                  <Image
                     src={company.img}
                     alt={company.name}
                     width={200}
@@ -35,7 +35,7 @@ const Clients = () => {
                   />
                 )}
                 {company.nameImg && (
-                  <img
+                  <Image
                     src={company.nameImg}
                     alt={company.name}
                     width={200}

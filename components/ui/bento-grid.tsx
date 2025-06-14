@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
@@ -113,9 +114,11 @@ export const BentoGridItem = ({
     >
       {/* Background Image */}
       {img && (
-        <img
+        <Image
           src={img}
           alt="background"
+          width={500}
+          height={500}
           className={cn(
             "absolute inset-0 object-cover object-center w-full h-full z-0",
             imgClassName
@@ -134,10 +137,12 @@ export const BentoGridItem = ({
 
       {/* Optional spare image */}
       {spareImg && (
-        <img
+        <Image
           src={spareImg}
           alt="spare visual"
           className="absolute bottom-0 right-0 w-full h-auto object-contain opacity-40 z-20"
+          width={500}
+          height={500}
         />
       )}
 
@@ -156,7 +161,7 @@ export const BentoGridItem = ({
         <div className="text-sm md:text-xs lg:text-base font-extralight text-[#C1C2D3]">
           {description}
         </div>
-        <div className="text-lg lg:text-3xl font-bold max-w-96 mt-2">
+        <div className="text-lg lg:text-3xl font-bold max-w-96 mt-2 text-center">
           {title}
         </div>
 

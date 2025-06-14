@@ -35,7 +35,7 @@ const hero = () => {
         />
         {/* Radial gradient for the container to give a faded look */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-        <p className="z-20 bg-gradient-to-b from-neutral-200 to-neutral-200 bg-clip-text py-4 text-xl font-semibold text-transparent sm:text-4xl leading-snug">
+        <p className="z-20 bg-gradient-to-b text-center from-neutral-200 to-neutral-200 bg-clip-text py-4 text-xl font-semibold text-transparent sm:text-4xl leading-snug">
           Hi, I&apos;m{" "}
           <span className="font-bold text-transparent bg-gradient-to-r from-purple-300 via-purple-400 to-purple-500 bg-clip-text transition duration-300 hover:brightness-125">
             Hamza Mohammed{" "}
@@ -44,7 +44,7 @@ const hero = () => {
         </p>
 
         <TextGenerateEffect
-          className="text-leftb md:text-5xl lg:text-6xl text-2xl font-bold text-black dark:text-white"
+          className="text-leftb md:text-5xl lg:text-6xl text-2xl font-bold text-black dark:text-white text-center"
           words="A spark of curiosity led me to tech—now I turn ideas into solutions."
         />
         <Link href="#about">

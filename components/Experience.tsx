@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./ui/moving-border";
 import { workExperience } from "@/data";
+import Image from "next/image";
 
 const Experience = () => {
   return (
@@ -21,10 +22,12 @@ const Experience = () => {
               borderClassName="opacity-50"
             >
               <div className="flex flex-col items-center justify-center h-full gap-3 px-4 text-center">
-                <img
+                <Image
                   src={experience.thumbnail}
                   alt={experience.title}
                   className="lg:w-28 lg:h-28 md:w-24 md:h-24 w-20 h-20 rounded-full object-cover"
+                  width={100}
+                  height={100}
                 />
                 <h2 className="text-xl font-bold text-white">
                   {experience.title}

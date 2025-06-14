@@ -31,22 +31,27 @@ export const TextGenerateEffect = ({
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className={`${
-                idx > 9 ? "text-purple-500" : "dark:text-white text-black"
-              }  opacity-0`}
-              style={{
-                filter: filter ? "blur(10px)" : "none",
-              }}
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
+      <motion.div
+        ref={scope}
+        className="flex flex-wrap gap-1 justify-center items-center"
+      >
+        {wordsArray.map((word, idx) => (
+          <motion.span
+            key={word + idx}
+            initial={{ opacity: 0, filter: "blur(8px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{
+              duration: 0.5,
+              delay: idx * 0.05,
+              ease: "easeOut",
+            }}
+            className={`${
+              idx > 9 ? "text-purple-500" : "dark:text-white text-black"
+            } text-base`}
+          >
+            {word}{" "}
+          </motion.span>
+        ))}
       </motion.div>
     );
   };

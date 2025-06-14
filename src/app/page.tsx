@@ -1,4 +1,3 @@
-import { LuAntenna } from "react-icons/lu";
 import { Suspense, lazy } from "react";
 import { FloatingNav } from "../../components/ui/floating-navbar";
 import Clients from "@/components/Clients";
@@ -16,7 +15,7 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <FloatingNav
           navItems={[
-            { name: "Home", link: "#", icon: <LuAntenna /> },
+            { name: "Home", link: "#" },
             { name: "About", link: "#about" },
             { name: "Projects", link: "#projects" },
             { name: "Clients", link: "#testimonials" },

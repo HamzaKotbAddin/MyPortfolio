@@ -1,17 +1,20 @@
 import Link from "next/link";
 import React from "react";
 import MagicButton from "./ui/MagicButton";
-import { FaEnvelope, FaGithub } from "react-icons/fa6";
+import { FaEnvelope } from "react-icons/fa6";
 import { socialMedia } from "@/data";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="w-full relative pt-20 pb-10" id="contact">
       <div className="w-full absolute top-0 left-0 z-0 h-[500px]">
-        <img
+        <Image
           src="/footer-grid.svg"
           alt="footer"
           className="w-full h-full object-cover pointer-events-none"
+          width={500}
+          height={500}
         />
       </div>
       <div className="relative flex flex-col items-center justify-center gap-4 z-10">
@@ -47,10 +50,12 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-white/90 dark:text-white/70 hover:text-purple-400 transition-colors duration-300"
           >
-            <img
+            <Image
               src={item.img}
               alt={item.name}
               className="w-6 h-6 object-contain cursor-pointer z-50"
+              width={24}
+              height={24}
             />
           </Link>
         ))}
