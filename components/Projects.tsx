@@ -71,8 +71,6 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => (
                 height={24}
                 className="p-1"
                 loading="lazy"
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mP8//8/AwAI/wH+9Q2AAAAAElFTkSuQmCC"
               />
             </div>
           ))}
