@@ -20,19 +20,6 @@ const GlobeDemo = dynamic(
   }
 );
 
-export default function LazyGlobeWrapper() {
-  const { ref, inView } = useInView({ triggerOnce: true });
-  const [showGlobe, setShowGlobe] = useState(false);
-
-  useEffect(() => {
-    if (inView) {
-      setShowGlobe(true);
-    }
-  }, [inView]);
-
-  return <div ref={ref}>{showGlobe && <GlobeDemo />}</div>;
-}
-
 export const BentoGrid = ({
   className,
   children,
@@ -76,24 +63,6 @@ export const BentoGridItem = ({
 
   const leftLists = ["Next.js", "React.js", "TypeScript"];
   const rightLists = ["Supabase", "Tailwind CSS", "Vercel"];
-  const [showGlobe, setShowGlobe] = useState(false);
-
-  useEffect(() => {
-    if (id === 2) {
-      // Delay mounting to let Spotlight animate
-      const timeout = setTimeout(() => {
-        if ("requestIdleCallback" in window) {
-          (window as any).requestIdleCallback(() => setShowGlobe(true));
-        } else {
-          setShowGlobe(true);
-        }
-      }, 1500); // delay slightly after transition/render
-
-      return () => clearTimeout(timeout);
-    } else {
-      setShowGlobe(false); // hide if not visible
-    }
-  }, [id]);
 
   const handleCopy = async () => {
     try {
