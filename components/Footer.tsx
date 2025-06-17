@@ -8,15 +8,6 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="w-full relative pt-20 pb-10" id="contact">
-      <div className="w-full absolute top-0 left-0 z-0 h-[500px]">
-        <Image
-          src="/footer-grid.svg"
-          alt="footer"
-          className="w-full h-full object-cover pointer-events-none"
-          width={500}
-          height={500}
-        />
-      </div>
       <div className="relative flex flex-col items-center justify-center gap-4 z-10">
         <h1 className="heading group text-center text-white text-4xl md:text-5xl lg:text-6xl font-bold transition-all duration-300 mb-10">
           contact{" "}
@@ -45,15 +36,15 @@ const Footer = () => {
         {socialMedia.map((item) => (
           <Link
             key={item.id}
-            href="https://www.instagram.com/"
+            href={item.link || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/90 dark:text-white/70 hover:text-purple-400 transition-colors duration-300"
+            className="text-white/90 dark:text-white/70 hover:text-purple-400 transition-colors duration-300 z-20"
           >
             <Image
               src={item.img}
               alt={item.name}
-              className="w-6 h-6 object-contain cursor-pointer z-50"
+              className="w-6 h-6 object-contain cursor-pointer "
               width={24}
               height={24}
             />

@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export const InfiniteMovingCards = ({
   items,
@@ -12,6 +12,7 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
+    image?: string;
     quote: string;
     name: string;
     title: string;
@@ -21,8 +22,8 @@ export const InfiniteMovingCards = ({
   pauseOnHover?: boolean;
   className?: string;
 }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     addAnimation();
@@ -98,7 +99,7 @@ export const InfiniteMovingCards = ({
 
               <div className="flex items-center gap-4 mt-4">
                 <Image
-                  src="/profile.svg"
+                  src={item.image || "/profile.svg"}
                   alt="Avatar"
                   className="h-12 w-12 rounded-full object-cover"
                   width={48}

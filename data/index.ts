@@ -1,28 +1,28 @@
 export const gridItems = [
   {
     id: 1,
-    title: "I bring UI to life with code and creativity",
-    description: "Experienced in React, Next.js, TypeScript, and responsive design.",
+    title: "I craft clean UI with real code",
+    description: "Skilled in React, Next.js, and Tailwind CSS. I build responsive, fast, and accessible UIs.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
+    titleClassName: "justify-center md:justify-start lg:justify-center",
+    img: "/pexels-shottrotter-1309766.webp",
     spareImg: "",
   },
   {
     id: 2,
-    title: "Tech flows around the clock",
-    description: "I'm used to async workflows, version control, and remote teamwork.",
+    title: "Tech flows through teamwork",
+    description: "Git, GitHub, async workflows, and remote collaboration are second nature.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
-    titleClassName: "justify-start",
+    titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "",
     spareImg: "",
   },
   {
     id: 3,
     title: "Front-end is my canvas",
-    description: "From semantic HTML to Tailwind CSS and component-driven design.",
+    description: "From semantic HTML to animated, component-based UIs with Vite and Tailwind CSS.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -31,28 +31,28 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Design meets logic",
-    description: "I turn Figma wireframes into fully functional interfaces.",
+    title: "Turning design into experience.",
+    description: "Figma wireframes to fully interactive, pixel-perfect UIs.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "/grid.svg",
+    img: "",
     spareImg: "/b4.svg",
   },
   {
     id: 5,
-    title: "Built to animate and interact",
-    description: "Currently developing a JavaScript animation library from scratch.",
+    title: "Motion & interaction matter",
+    description: "Experimenting with JavaScript animations and GSAP for engaging UI.",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 ",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
+    img: "/pexels-pixabay-270557.webp",
     spareImg: "/grid.svg",
   },
   {
     id: 6,
     title: "Let’s build something impactful",
-    description: "Got an idea? I’m ready to turn it into code.",
+    description: "Have a project idea? I can help you bring it to life with clean code.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -69,15 +69,15 @@ export const Projects = [
     title: "Green Marketplace",
     description: "A university project for a sustainable e-commerce platform using Vite.js and Firebase, focused on eco-friendly products.",
     link: "https://green-marketplace-513bc.web.app/", // Add link if hosted
-    image: "/marketplace.png",
-    iconLists:["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg", "/firebase.svg", "/vite.svg",],
+    image: "/marketplace.webp",
+    iconLists:["/re.svg", "/tail.svg", "/ts.svg", , "/fm.svg", "/firebase.svg", "/vite.svg",],
   },
   {
     id: 2,
     title: "Sentiment Analysis Tool",
     description: "A sentiment analysis project using NLTK and RoBERTa to analyze text polarity and emotion.",
     link: "https://github.com/HamzaKotbAddin/Sentiment_Analysis", // Add GitHub link if available
-    image: "/sentiment-analysis.png",
+    image: "/sentiment-analysis.webp",
     iconLists: [
       "/python.svg",
       "/nltk.webp",
@@ -89,7 +89,7 @@ export const Projects = [
     title: "AJA Space landing page",
     description: "Contributed to front-end development using React, Next.js Designed UI in Figma and collaborated on real-world projects.",
     link: "https://aja-space-git-main-hamzakotbaddins-projects.vercel.app/", // Add portfolio or GitHub page if you have a section for this
-    image: "/aja-space.png",
+    image: "/aja-space.webp",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/next.svg"],
   },
   {
@@ -97,7 +97,7 @@ export const Projects = [
     title: "To-Do List App",
     description: "A simple and intuitive task manager built with React to help users organize their daily tasks efficiently.",
     link: "https://todolist-one-theta.vercel.app/", // Add link if hosted or GitHub link
-    image: "/todo-app.png",
+    image: "/todo-app.webp",
     iconLists: [
       "/next.svg",
       "/ts.svg",
@@ -111,35 +111,20 @@ export const Projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Hamza was a great addition to our frontend team at AJA Space. He showed solid React and UI/UX skills, and always delivered his tasks on time.",
+    name: "Fatimah AlQahtani",
+    title: "Team Lead at AJA Space",
+    // image: "/fatimah.jpg",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Hamza's dedication and ability to learn quickly made him an asset during his internship. His work on the landing page was impressive.",
+    name: "Abdullah AlHarbi",
+    title: "Senior Developer at AJA Space",
+    // image: "/abdullah.jpg",
   },
 ];
+
 
 export const companies = [
   {
@@ -158,33 +143,20 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Frontend Developer Intern",
+    desc: "Developed responsive UI using React, Next.js, Tailwind CSS. Integrated Supabase for authentication and database. Collaborated using Git & GitHub.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Operations Supervisor",
+    desc: "Led logistics and team operations for Abar Water Factory. Improved staff efficiency and managed supply to 20+ stores.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
 ];
+
 
 export const socialMedia = [
   {

@@ -22,11 +22,9 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => (
           <Image
             src="/bg.png"
             alt="background"
-            className="object-cover"
-            sizes="(max-width: 768px) 85vw, (max-width: 1024px) 650px, 480px"
-            loading="lazy"
-            width={480}
-            height={320}
+            width={500}
+            height={500}
+            className="object-cover w-auto h-auto"
           />
         </div>
         <Image
@@ -65,7 +63,7 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => (
               }}
             >
               <Image
-                src={icon}
+                src={icon || "/default-icon.svg"}
                 alt={`Technology icon ${index + 1}`}
                 width={24}
                 height={24}

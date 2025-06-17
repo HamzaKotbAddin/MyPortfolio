@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 import dynamic from "next/dynamic";
 import { CustomProgressBar } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
@@ -117,20 +116,20 @@ export const BentoGridItem = ({
 
       {/* Gradient animation for ID 6 */}
       {id === 6 && (
-        <div className="absolute inset-0 z-20 flex items-center justify-center px-4 text-white text-3xl text-center md:text-4xl lg:text-7xl pointer-events-none"></div>
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-4 text-white text-3xl  md:text-4xl lg:text-7xl pointer-events-none"></div>
       )}
 
       {/* Content */}
       <div
         className={cn(
           titleClassName,
-          "relative z-30 px-5 py-5 lg:p-10 flex flex-col justify-between text-white min-h-40"
+          "relative z-30 ml-2 l flex flex-col  text-white min-h-40"
         )}
       >
-        <div className="text-sm md:text-xs lg:text-base font-extralight text-[#C1C2D3]">
+        <div className="text-sm ml-2 lg:ml-5 md:text-xs lg:text-base font-extralight text-start text-[#C1C2D3]">
           {description}
         </div>
-        <div className="text-lg lg:text-3xl font-bold max-w-96 mt-2 text-center">
+        <div className="text-lg ml-2 lg:ml-5 lg:text-3xl font-bold max-w-96 mt-2 text-start">
           {title}
         </div>
 
@@ -164,14 +163,14 @@ export const BentoGridItem = ({
         )}
         {/* Copy Button */}
         {id === 6 && (
-          <div className="mt-6">
+          <div className="mt-6 flex flex-col ">
             <MagicButton
               title={copied ? "Email is Copied!" : "Copy my email address"}
               icon={<IoCopyOutline />}
               position="left"
               handleClick={handleCopy}
               copied={copied}
-              otherClasses="!bg-[#161A31] rounded-md h-10"
+              otherClasses="!bg-[#161A31] rounded-md h-10 w-fit ml-4 mb-4"
             />
           </div>
         )}
