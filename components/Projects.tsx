@@ -1,89 +1,115 @@
-import React, { memo, useMemo } from "react";
+"use client";
+import { memo, useEffect, useMemo, useState } from "react";
 import { Projects } from "../data/index";
 import Image from "next/image";
 import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa6";
 import { Boxes } from "./ui/background-boxes";
+import Link from "next/link";
 
 // Memoized project card component
 type ProjectCardProps = { item: (typeof Projects)[number] };
 
-const ProjectCard = memo(({ item }: ProjectCardProps) => (
-  <div
-    className="sm:h-[50rem] h-[40rem] lg:min-h-[45rem] flex items-center justify-center sm:w-[650px] w-[85vw] max-w-[500px]"
-    id="projects"
-  >
-    <PinContainer title={item.title} href={item.link}>
-      <div className="relative flex items-end justify-center sm:w-[650px] sm:h-[50vh] h-[35vh] w-[85vw] max-w-[480px] overflow-hidden mb-10 backdrop-blur-lg pb-4">
-        <div
-          className="absolute inset-0 w-full h-full overflow-hidden lg:rounded-3xl"
-          style={{ backgroundColor: "#0f0f0f" }}
-        >
+const ProjectCard = memo(({ item }: ProjectCardProps) => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth > 768);
+    check(); // initial check
+
+    // optional: update on resize
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  return (
+    <div
+      className="sm:h-[50rem] h-[40rem] lg:min-h-[45rem] flex items-center justify-center sm:w-[650px] w-[85vw] max-w-[500px]"
+      id="projects"
+    >
+      <PinContainer
+        title={item.title}
+        href={item.link}
+        className={`pin-container ${isDesktop ? "with-3d" : ""}`}
+      >
+        <div className="relative flex items-end justify-center sm:w-[650px] sm:h-[50vh] h-[35vh] w-[85vw] max-w-[480px] overflow-hidden mb-10 backdrop-blur-lg pb-4">
+          <div
+            className="absolute inset-0 w-full h-full overflow-hidden lg:rounded-3xl"
+            style={{ backgroundColor: "#0f0f0f" }}
+          >
+            <Image
+              src="/bg.png"
+              alt="background"
+              width={500}
+              height={500}
+              className="object-cover w-auto h-auto"
+            />
+          </div>
           <Image
-            src="/bg.png"
-            alt="background"
-            width={500}
-            height={500}
-            className="object-cover w-auto h-auto"
+            src={item.image}
+            alt={`Screenshot of ${item.title}`}
+            width={480}
+            height={320}
+            className="z-10 relative w-[calc(100%-1.5rem)] h-[calc(100%-2rem)] object-cover object-top rounded-2xl shadow-2xl ring-1 ring-white/10 hover:scale-[1.02] transition-all duration-700 ease-out will-change-transform"
+            sizes="(max-width: 768px) 85vw, (max-width: 1024px) 650px, 480px"
+            loading="lazy"
           />
         </div>
-        <Image
-          src={item.image}
-          alt={`Screenshot of ${item.title}`}
-          width={480}
-          height={320}
-          className="z-10 relative w-[calc(100%-1.5rem)] h-[calc(100%-2rem)] object-cover object-top rounded-2xl shadow-2xl ring-1 ring-white/10 hover:scale-[1.02] transition-all duration-700 ease-out will-change-transform"
-          sizes="(max-width: 768px) 85vw, (max-width: 1024px) 650px, 480px"
-          loading="lazy"
-        />
-      </div>
 
-      <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-        {item.title}
-      </h1>
+        <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+          {item.title}
+        </h1>
 
-      <p
-        className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-        style={{
-          color: "#BEC1DD",
-          margin: "1vh 0",
-        }}
-      >
-        {item.description}
-      </p>
+        <p
+          className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
+          style={{
+            color: "#BEC1DD",
+            margin: "1vh 0",
+          }}
+        >
+          {item.description}
+        </p>
 
-      <div className="flex items-center justify-between mt-7 mb-3">
-        <div className="flex items-center">
-          {item.iconLists.map((icon, index) => (
-            <div
-              key={`${item.id}-icon-${index}`}
-              className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-              style={{
-                transform: `translateX(-${5 * index + 2}px)`,
-              }}
-            >
-              <Image
-                src={icon || "/default-icon.svg"}
-                alt={`Technology icon ${index + 1}`}
-                width={24}
-                height={24}
-                className="p-1"
-                loading="lazy"
-              />
+        <div className="flex items-center justify-between mt-7 mb-3">
+          <div className="flex items-center">
+            {item.iconLists.map((icon, index) => (
+              <div
+                key={`${item.id}-icon-${index}`}
+                className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                style={{
+                  transform: `translateX(-${5 * index + 2}px)`,
+                }}
+              >
+                <Image
+                  src={icon || "/default-icon.svg"}
+                  alt={`Technology icon ${index + 1}`}
+                  width={24}
+                  height={24}
+                  className="p-1"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+
+          <Link
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple no-underline"
+          >
+            <div className="flex justify-center items-center">
+              <p className="flex lg:text-xl md:text-xs text-sm text-white">
+                Check Live Site
+              </p>
+              <FaLocationArrow className="ms-3" color="#CBACF9" />
             </div>
-          ))}
+          </Link>
         </div>
-
-        <div className="flex justify-center items-center">
-          <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-            Check Live Site
-          </p>
-          <FaLocationArrow className="ms-3" color="#CBACF9" />
-        </div>
-      </div>
-    </PinContainer>
-  </div>
-));
+      </PinContainer>
+    </div>
+  );
+});
 
 ProjectCard.displayName = "ProjectCard";
 
