@@ -31,6 +31,7 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => {
         title={item.title}
         href={item.link}
         className={`pin-container ${isDesktop ? "with-3d" : ""}`}
+        disable3D={!isDesktop}
       >
         <div className="relative flex items-end justify-center sm:w-[650px] sm:h-[50vh] h-[35vh] w-[85vw] max-w-[480px] overflow-hidden mb-10 backdrop-blur-lg pb-4">
           <div
