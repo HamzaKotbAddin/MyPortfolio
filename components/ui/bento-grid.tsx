@@ -126,16 +126,18 @@ export const BentoGridItem = ({
           "relative z-30 ml-2 l flex flex-col  text-white min-h-40"
         )}
       >
-        <div className="text-sm ml-2 lg:ml-5 md:text-xs lg:text-base font-extralight text-start text-[#C1C2D3]">
-          {description}
-        </div>
         <div className="text-lg ml-2 lg:ml-5 lg:text-3xl font-bold max-w-96 mt-2 text-start">
           {title}
+        </div>
+        <div
+          className="text-sm ml-2 lg:ml-5 md:text-xs lg:text-base font-extralight text-start
+        text-[#C1C2D3]"
+        >
+          {description}
         </div>
 
         {/* Globe */}
         {id === 2 && <GlobeDemo />}
-
         {/* Tech Stack Grid */}
         {id === 3 && (
           <div className="relative z-30 mt-4 grid grid-cols-2 gap-3 lg:gap-4">
