@@ -1,17 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaEnvelope } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import Image from "next/image";
+import { useFadeInOnScroll } from "./ui/components/FadeInOnScroll";
 
 const Footer = () => {
+  useFadeInOnScroll();
+
   return (
-    <footer
-      className="w-full relative pt-20 pb-10 fade-in-up"
-      suppressHydrationWarning
-      id="contact"
-    >
+    <footer className="w-full relative pt-20 pb-10 fade-in-up" id="contact">
       <div className="relative flex flex-col items-center justify-center gap-4 z-10">
         <h1 className="heading group text-center text-white text-4xl md:text-5xl lg:text-6xl font-bold transition-all duration-300 mb-10">
           contact{" "}

@@ -6,12 +6,14 @@ import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa6";
 import { Boxes } from "./ui/background-boxes";
 import Link from "next/link";
+import { useFadeInOnScroll } from "./ui/components/FadeInOnScroll";
 
 // Memoized project card component
 type ProjectCardProps = { item: (typeof Projects)[number] };
 
 const ProjectCard = memo(({ item }: ProjectCardProps) => {
   const [isDesktop, setIsDesktop] = useState(false);
+  useFadeInOnScroll();
 
   useEffect(() => {
     const check = () => setIsDesktop(window.innerWidth > 768);
@@ -26,7 +28,6 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => {
     <div
       className="sm:h-[50rem] h-[40rem] lg:min-h-[45rem] flex items-center justify-center sm:w-[650px] w-[85vw] max-w-[500px] fade-in-up"
       id="projects"
-      suppressHydrationWarning
     >
       <PinContainer
         title={item.title}
