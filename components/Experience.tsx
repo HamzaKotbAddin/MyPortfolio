@@ -1,11 +1,15 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/moving-border";
 import { workExperience } from "@/data";
 import Image from "next/image";
 
 const Experience = () => {
   return (
-    <div className="py-20" id="testimonials">
+    <div
+      className="py-20 fade-in-up"
+      suppressHydrationWarning
+      id="testimonials"
+    >
       <h1 className="heading group text-center text-white text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight transition-all duration-300 mb-10">
         My{" "}
         <span className="relative inline-block text-purple-400 transition duration-300 group-hover:text-purple-300">

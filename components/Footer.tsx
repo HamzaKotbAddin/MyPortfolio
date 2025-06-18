@@ -7,7 +7,11 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full relative pt-20 pb-10" id="contact">
+    <footer
+      className="w-full relative pt-20 pb-10 fade-in-up"
+      suppressHydrationWarning
+      id="contact"
+    >
       <div className="relative flex flex-col items-center justify-center gap-4 z-10">
         <h1 className="heading group text-center text-white text-4xl md:text-5xl lg:text-6xl font-bold transition-all duration-300 mb-10">
           contact{" "}
@@ -29,7 +33,7 @@ const Footer = () => {
       </div>
       <div className="flex justify-center items-center mt-10 md:flex-row flex-col gap-4">
         <p className="text-white/90 dark:text-white/70 text-sm md:text-base">
-          © {new Date().getFullYear()} Hamza Mohammed. All rights reserved.
+          © {new Date().getFullYear()} Hamza Mohamed. All rights reserved.
         </p>
       </div>
       <div className="flex justify-center items-center gap-4 mt-4">

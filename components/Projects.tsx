@@ -24,8 +24,9 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => {
 
   return (
     <div
-      className="sm:h-[50rem] h-[40rem] lg:min-h-[45rem] flex items-center justify-center sm:w-[650px] w-[85vw] max-w-[500px]"
+      className="sm:h-[50rem] h-[40rem] lg:min-h-[45rem] flex items-center justify-center sm:w-[650px] w-[85vw] max-w-[500px] fade-in-up"
       id="projects"
+      suppressHydrationWarning
     >
       <PinContainer
         title={item.title}
