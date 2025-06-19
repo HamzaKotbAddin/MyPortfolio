@@ -47,7 +47,7 @@ export const gridItems = [
     imgClassName: "absolute right-0 bottom-0 ",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/pexels-pixabay-270557.webp",
-    spareImg: "/grid.svg",
+    // spareImg: "/grid.svg",
   },
   {
     id: 6,
