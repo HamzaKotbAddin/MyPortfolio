@@ -8,7 +8,7 @@ const Grid = () => {
   useFadeInOnScroll();
 
   return (
-    <section id="about me" className="fade-in-up">
+    <section id="about" className="fade-in-up">
       <BentoGrid className="w-full py-20 ">
         {gridItems.map((item) => (
           <BentoGridItem
