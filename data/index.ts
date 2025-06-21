@@ -52,7 +52,7 @@ export const gridItems = [
   {
     id: 6,
     title: "Let’s build something impactful",
-    description: "Have a project idea? I can help you bring it to life with clean code.",
+    description: "Got a project? I can help you bring it to life with clean code.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -67,7 +67,7 @@ export const Projects = [
   {
     id: 1,
     title: "Green Marketplace",
-    description: "A university project for a sustainable e-commerce platform using Vite.js and Firebase, focused on eco-friendly products.",
+    description: "A university project: a sustainable e-commerce platform built with Vite.js and Firebase, focusing on eco-friendly products.",
     link: "https://green-marketplace-513bc.web.app/", // Add link if hosted
     image: "/marketplace.webp",
     iconLists:["/re.svg", "/tail.svg", "/ts.svg", , "/fm.svg", "/firebase.svg", "/vite.svg",],
@@ -87,7 +87,7 @@ export const Projects = [
   {
     id: 3,
     title: "AJA Space landing page",
-    description: "Contributed to front-end development using React, Next.js Designed UI in Figma and collaborated on real-world projects.",
+    description: "Contributed to front-end development using React and Next.js. Designed the UI in Figma and collaborated on real-world projects.",
     link: "https://aja-space-git-main-hamzakotbaddins-projects.vercel.app/", // Add portfolio or GitHub page if you have a section for this
     image: "/aja-space.webp",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/next.svg"],
@@ -135,7 +135,7 @@ export const companies = [
   { 
     id: 2,
     name: "abar hail",
-    img: "/abar.webp",
+    nameImg: "/abar.webp",
   },
 
 ];
@@ -144,7 +144,7 @@ export const workExperience = [
   {
     id: 1,
     title: "Frontend Developer Intern",
-    desc: "Developed responsive UI using React, Next.js, Tailwind CSS. Integrated Supabase for authentication and database. Collaborated using Git & GitHub.",
+    desc: "Built responsive UIs using React, Next.js, and Tailwind CSS. Integrated Supabase for auth and data. Collaborated through Git and GitHub workflows.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
