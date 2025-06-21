@@ -44,7 +44,7 @@ const hero = () => {
         </p>
 
         <TextGenerateEffect
-          className="text-leftb md:text-5xl lg:text-6xl text-2xl font-bold text-black dark:text-white text-center"
+          className="text-leftb md:text-5xl lg:text-6xl text-2xl font-bold text-white text-center"
           words="A spark of curiosity led me to tech—now I turn ideas into solutions."
         />
         <Link href="#about">

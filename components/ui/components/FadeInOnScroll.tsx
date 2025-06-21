@@ -1,16 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export function useFadeInOnScroll() {
-  const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient) return;
-
     const elements = document.querySelectorAll(".fade-in-up");
 
     const observer = new IntersectionObserver(
@@ -18,8 +10,7 @@ export function useFadeInOnScroll() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-            // Optional: unobserve after animation to prevent re-triggering
-            // observer.unobserve(entry.target);
+            // observer.unobserve(entry.target); // optional
           }
         });
       },
@@ -32,7 +23,7 @@ export function useFadeInOnScroll() {
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [isClient]);
+  }, []);
 
-  return isClient;
+  return null; // ما في شي تحتاج ترجعه فعليًا
 }
