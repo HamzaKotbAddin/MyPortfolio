@@ -2,7 +2,7 @@ export const gridItems = [
   {
     id: 1,
     title: "I craft clean UI with real code",
-    description: "Skilled in React, Next.js, and Tailwind CSS. I build responsive, fast, and accessible UIs.",
+    description: "Skilled in React, Next.js, and Tailwind CSS. I build responsive, accessible, and fast UIs.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -12,7 +12,7 @@ export const gridItems = [
   {
     id: 2,
     title: "Tech flows through teamwork",
-    description: "Git, GitHub, async workflows, and remote collaboration are second nature.",
+    description: "Git, GitHub, async workflows, Express, and remote collaboration are second nature.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -21,8 +21,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Front-end is my canvas",
-    description: "From semantic HTML to animated, component-based UIs with Vite and Tailwind CSS.",
+    title: "Fullstack mindset, front-end heart",
+    description: "From semantic HTML to backend APIs with Express, MongoDB, and PostgreSQL.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -31,8 +31,8 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Turning design into experience.",
-    description: "Figma wireframes to fully interactive, pixel-perfect UIs.",
+    title: "Design → Code → Deploy",
+    description: "Pixel-perfect UIs from Figma to Vercel with Git workflows and clean structure.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -42,13 +42,14 @@ export const gridItems = [
   {
     id: 5,
     title: "Motion & interaction matter",
-    description: "Experimenting with JavaScript animations and GSAP for engaging UI.",
+    description: "JavaScript animations and GSAP bring UI to life with smooth, meaningful motion.",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 ",
+    imgClassName: "absolute right-0 bottom-0",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/pexels-pixabay-270557.webp",
     // spareImg: "/grid.svg",
   },
+
   {
     id: 6,
     title: "Let’s build something impactful",
@@ -60,6 +61,8 @@ export const gridItems = [
     spareImg: "",
   },
 ];
+
+
 
 
 
@@ -130,7 +133,7 @@ export const companies = [
   {
     id: 1,
     name: "aja space",
-    nameImg: "/aja.webp",
+    nameImg: "/aja-only.webp",
   },
   { 
     id: 2,
@@ -165,14 +168,11 @@ export const socialMedia = [
     link: "https://github.com/HamzaKotbAddin",
     name: "GitHub",
   },
+
   {
     id: 2,
-    img: "/twit.svg",
-    name: "Twitter",
-  },
-  {
-    id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/hamza-yassen-77856231a/",
     name: "LinkedIn",
   },
 ];

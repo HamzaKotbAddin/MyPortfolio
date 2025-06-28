@@ -5,10 +5,8 @@ import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import { useFadeInOnScroll } from "./ui/components/FadeInOnScroll";
 
 const Grid = () => {
-  useFadeInOnScroll();
-
   return (
-    <section id="about" className="fade-in-up">
+    <section id="about" className="">
       <BentoGrid className="w-full py-20 ">
         {gridItems.map((item) => (
           <BentoGridItem

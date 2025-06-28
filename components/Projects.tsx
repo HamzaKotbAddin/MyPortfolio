@@ -13,7 +13,6 @@ type ProjectCardProps = { item: (typeof Projects)[number] };
 
 const ProjectCard = memo(({ item }: ProjectCardProps) => {
   const [isDesktop, setIsDesktop] = useState(false);
-  useFadeInOnScroll();
 
   useEffect(() => {
     const check = () => setIsDesktop(window.innerWidth > 768);

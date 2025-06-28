@@ -60,8 +60,8 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const leftLists = ["Next.js", "React.js", "TypeScript"];
-  const rightLists = ["Supabase", "Tailwind CSS", "Vercel"];
+  const leftLists = ["Next.js", "TypeScript", "Express.js"];
+  const rightLists = ["MongoDB", "Vercel", "Python"];
 
   const handleCopy = async () => {
     try {

@@ -21,7 +21,12 @@ export default function Home() {
             { name: "Clients", link: "#testimonials" },
             { name: "Experience", link: "#experience" },
             { name: "Contact", link: "#contact" },
-            { name: "Resume", link: "/resume.pdf" },
+            {
+              name: "Resume",
+              link: "/Hamza_Yaseen_Frontend_Developer_CV.pdf",
+              target: "_blank",
+              rel: "noopener noreferrer",
+            },
           ]}
         />
 
