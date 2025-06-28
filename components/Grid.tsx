@@ -2,7 +2,6 @@
 
 import { gridItems } from "../data";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
-import { useFadeInOnScroll } from "./ui/components/FadeInOnScroll";
 
 const Grid = () => {
   return (

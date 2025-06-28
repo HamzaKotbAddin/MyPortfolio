@@ -6,7 +6,6 @@ import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa6";
 import { Boxes } from "./ui/background-boxes";
 import Link from "next/link";
-import { useFadeInOnScroll } from "./ui/components/FadeInOnScroll";
 
 // Memoized project card component
 type ProjectCardProps = { item: (typeof Projects)[number] };

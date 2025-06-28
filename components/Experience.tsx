@@ -2,10 +2,8 @@
 import { Button } from "./ui/moving-border";
 import { workExperience } from "@/data";
 import Image from "next/image";
-import { useFadeInOnScroll } from "./ui/components/FadeInOnScroll";
 
 const Experience = () => {
-  useFadeInOnScroll();
   return (
     <div className="py-20" id="testimonials">
       <h1 className="heading group text-center text-white text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight transition-all duration-300 mb-10">

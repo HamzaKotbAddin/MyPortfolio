@@ -3,7 +3,6 @@ import React from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import { companies, testimonials } from "@/data";
 import Image from "next/image";
-import { useFadeInOnScroll } from "./ui/components/FadeInOnScroll";
 
 const Clients = () => {
   return (

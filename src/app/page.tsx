@@ -3,6 +3,12 @@ import { FloatingNav } from "../../components/ui/floating-navbar";
 import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
+import {
+  SlideUpBlur,
+  MagneticPull,
+  StaggerContainer,
+  MorphingScale,
+} from "@/components/ui/FadeInSection";
 
 // Lazy-loaded components
 const Hero = lazy(() => import("../../components/Hero"));
@@ -30,22 +36,38 @@ export default function Home() {
           ]}
         />
 
-        <Suspense fallback={<div className="text-white">Loading hero...</div>}>
+        <Suspense fallback={<div className="h-screen bg-black" />}>
           <Hero />
         </Suspense>
 
-        <Suspense fallback={<div className="text-white">Loading grid...</div>}>
-          <Grid />
+        {/* About/Grid section - smooth morph */}
+        <Suspense fallback={<div className="h-32 bg-black" />}>
+          <MorphingScale>
+            <Grid />
+          </MorphingScale>
         </Suspense>
 
-        <Suspense
-          fallback={<div className="text-white">Loading projects...</div>}
-        >
-          <Projects />
+        {/* Projects - magnetic pull for interaction */}
+        <Suspense fallback={<div className="h-32 bg-black" />}>
+          <MagneticPull>
+            <Projects />
+          </MagneticPull>
         </Suspense>
-        <Clients />
-        <Experience />
-        <Footer />
+
+        {/* Clients - premium blur effect */}
+        <SlideUpBlur>
+          <Clients />
+        </SlideUpBlur>
+
+        {/* Experience - staggered reveal */}
+        <StaggerContainer>
+          <Experience />
+        </StaggerContainer>
+
+        {/* Footer - simple slide up */}
+        <SlideUpBlur>
+          <Footer />
+        </SlideUpBlur>
       </div>
     </main>
   );
