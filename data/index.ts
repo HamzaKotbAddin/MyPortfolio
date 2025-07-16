@@ -146,7 +146,7 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Developer Intern",
+    title: "Software Developer",
     desc: "Built responsive UIs using React, Next.js, and Tailwind CSS. Integrated Supabase for auth and data. Collaborated through Git and GitHub workflows.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
