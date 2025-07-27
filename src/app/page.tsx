@@ -42,19 +42,15 @@ export default function Home() {
 
         {/* About/Grid section - smooth morph */}
         <Suspense fallback={<div className="h-32 bg-black" />}>
-          <MorphingScale>
-            <Grid />
-          </MorphingScale>
+          <Grid />
         </Suspense>
 
         {/* Projects - magnetic pull for interaction */}
         <Suspense fallback={<div className="h-32 bg-black" />}>
-          <MagneticPull>
-            <Projects />
-          </MagneticPull>
+          <Projects />
         </Suspense>
 
-        {/* Clients - premium blur effect */}
+        {/* Clients -  blur effect */}
         <SlideUpBlur>
           <Clients />
         </SlideUpBlur>
