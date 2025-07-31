@@ -1,8 +1,8 @@
 export const gridItems = [
   {
     id: 1,
-    title: "I craft clean UI with real code",
-    description: "Skilled in React, Next.js, and Tailwind CSS. I build responsive, accessible, and fast UIs.",
+    title: "UI that’s Clean, Fast, and Accessible",
+    description: "I build performant and responsive interfaces using React, Next.js, and Tailwind CSS—optimized for clarity and usability.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -11,8 +11,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "Tech flows through teamwork",
-    description: "Git, GitHub, async workflows, Express, and remote collaboration are second nature.",
+    title: "Tech-Driven Collaboration",
+    description: "Version control, async workflows, and remote teamwork come naturally—Git, GitHub, Express, and agile communication are part of my daily workflow.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -21,8 +21,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Fullstack mindset, front-end heart",
-    description: "From semantic HTML to backend APIs with Express, MongoDB, and PostgreSQL.",
+    title: "Full-Stack with a Front-End Focus",
+    description: "From semantic HTML and smooth UX to backend APIs with Express, MongoDB, and PostgreSQL—I bridge both sides with clean logic.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -31,8 +31,8 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Design → Code → Deploy",
-    description: "Pixel-perfect UIs from Figma to Vercel with Git workflows and clean structure.",
+    title: "From Figma to Vercel",
+    description: "I translate designs into production-ready code with clean Git workflows, pixel-perfect precision, and structured deploy pipelines.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -41,19 +41,18 @@ export const gridItems = [
   },
   {
     id: 5,
-    title: "Motion & interaction matter",
-    description: "JavaScript animations and GSAP bring UI to life with smooth, meaningful motion.",
+    title: "Motion with Meaning",
+    description: "Using clean code, I craft subtle animations that guide users and elevate the experience without overdoing it.",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/pexels-pixabay-270557.webp",
     // spareImg: "/grid.svg",
   },
-
   {
     id: 6,
-    title: "Let’s build something impactful",
-    description: "Got a project? I can help you bring it to life with clean code.",
+    title: "Let’s Build Something That Matters",
+    description: "Have an idea or a challenge? I can help you bring it to life with modern, maintainable code and attention to detail.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -70,8 +69,8 @@ export const Projects = [
   {
     id: 1,
     title: "Green Marketplace",
-    description: "A university project: a sustainable e-commerce platform built with Vite.js and Firebase, focusing on eco-friendly products.",
-    link: "https://green-marketplace-513bc.web.app/", // Add link if hosted
+    description: "A sustainable e-commerce platform built with Vite.js and Firebase.",
+    link: "https://green-marketplace-513bc.web.app/", 
     image: "/marketplace.webp",
     iconLists:["/re.svg", "/tail.svg", "/ts.svg", , "/fm.svg", "/firebase.svg", "/vite.svg",],
   },
@@ -79,7 +78,7 @@ export const Projects = [
     id: 2,
     title: "Sentiment Analysis Tool",
     description: "A sentiment analysis project using NLTK and RoBERTa to analyze text polarity and emotion.",
-    link: "https://github.com/HamzaKotbAddin/Sentiment_Analysis", // Add GitHub link if available
+    link: "https://github.com/HamzaKotbAddin/Sentiment_Analysis", 
     image: "/sentiment-analysis.webp",
     iconLists: [
       "/python.svg",
@@ -90,22 +89,22 @@ export const Projects = [
   {
     id: 3,
     title: "AJA Space landing page",
-    description: "Contributed to front-end development using React and Next.js. Designed the UI in Figma and collaborated on real-world projects.",
-    link: "https://aja-space-git-main-hamzakotbaddins-projects.vercel.app/", // Add portfolio or GitHub page if you have a section for this
+    description: "Contributed to front-end development using React and Next.js. Designed the UI in Figma.",
+    link: "https://aja-space-git-main-hamzakotbaddins-projects.vercel.app/", 
     image: "/aja-space.webp",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/next.svg"],
   },
   {
     id: 4,
-    title: "To-Do List App",
-    description: "A simple and intuitive task manager built with React to help users organize their daily tasks efficiently.",
-    link: "https://todolist-one-theta.vercel.app/", // Add link if hosted or GitHub link
-    image: "/todo-app.webp",
+    title: "Chatterly – Real-Time Chat App",
+    description: "A real-time chat app using Express, Next.js, and TypeScript with authentication, socket updates.",
+    link: "https://chatterly-ashen.vercel.app/",
+    image: "/chat-app.webp",
     iconLists: [
       "/next.svg",
       "/ts.svg",
       "/tail.svg",
-      "/supabase.svg",
+
     ],
   },
 ];
@@ -115,15 +114,15 @@ export const testimonials = [
   {
     quote:
       "Hamza was a great addition to our frontend team at AJA Space. He showed solid React and UI/UX skills, and always delivered his tasks on time.",
-    name: "Fatimah AlQahtani",
-    title: "Team Lead at AJA Space",
-    // image: "/fatimah.jpg",
+    name: "Rakan Alanzi",
+    title: "CEO and Team Lead at AJA Space",
+    image: "/Rakan-Alanzi.webp",
   },
   {
-    quote:
-      "Hamza's dedication and ability to learn quickly made him an asset during his internship. His work on the landing page was impressive.",
-    name: "Abdullah AlHarbi",
-    title: "Senior Developer at AJA Space",
+    // quote:
+    //   "Hamza's dedication and ability to learn quickly made him an asset during his internship. His work on the landing page was impressive.",
+    // name: "Abdullah AlHarbi",
+    // title: "Senior Developer at AJA Space",
     // image: "/abdullah.jpg",
   },
 ];

@@ -14,14 +14,32 @@ const Clients = () => {
         </span>
       </h1> */}
       <div className="flex flex-col items-center">
-        {/* <div className="h-[50vh] md:h-[30rem] rounded-md flex flex-col anti-aliased relative overflow-hidden">
-          {" "}
+        <div className="h-[30vh] md:h-[15rem] rounded-md flex flex-col anti-aliased relative overflow-hidden">
+          <p className="text-lg italic text-white/80 text-center">
+            "Hamza was a great addition to our team at AJA Space. He showed
+            solid React and UI/UX skills, and always delivered his tasks on
+            time."
+          </p>
+          <div className="mt-4 flex items-center gap-4">
+            <img
+              src="/Rakan-Alanzi.webp"
+              className="w-12 h-12 rounded-full"
+              alt="Rakan Alanzi"
+            />
+            <div>
+              <p className="font-semibold text-white">Rakan Alanzi</p>
+              <p className="text-sm text-muted-foreground text-white/70">
+                CEO and Team Lead at AJA Space
+              </p>
+            </div>
+          </div>
+          {/* {" "}
           <InfiniteMovingCards
             items={testimonials}
             speed="slow"
             pauseOnHover={true}
-          />
-        </div> */}
+          /> */}
+        </div>
         <div className="flex flex-wrap justify-center items-center gap-8 mt-10">
           {companies.map((company) =>
             company.nameImg ? (

@@ -51,7 +51,7 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => {
             alt={`Screenshot of ${item.title}`}
             width={480}
             height={320}
-            className="z-10 relative w-[calc(100%-1.5rem)] h-[calc(100%-2rem)] object-cover object-top rounded-2xl shadow-2xl ring-1 ring-white/10 hover:scale-[1.02] transition-all duration-700 ease-out will-change-transform"
+            className="z-10 relative h-full rounded-2xl  "
             sizes="(max-width: 768px) 85vw, (max-width: 1024px) 650px, 480px"
             loading="lazy"
           />
@@ -76,7 +76,12 @@ const ProjectCard = memo(({ item }: ProjectCardProps) => {
             {item.iconLists.map((icon, index) => (
               <div
                 key={`${item.id}-icon-${index}`}
-                className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                className={`border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center ${
+                  icon?.includes("express-js.svg") ||
+                  icon?.includes("socket-io.svg")
+                    ? "fill-current text-white"
+                    : ""
+                }`}
                 style={{
                   transform: `translateX(-${5 * index + 2}px)`,
                 }}

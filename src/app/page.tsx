@@ -29,7 +29,7 @@ export default function Home() {
             { name: "Contact", link: "#contact" },
             {
               name: "Resume",
-              link: "/Hamza_Yaseen_Developer_CV.pdf",
+              link: "/Hamza_Yaseen_Software_CV.pdf",
               target: "_blank",
               rel: "noopener noreferrer",
             },

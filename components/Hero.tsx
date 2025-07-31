@@ -33,19 +33,17 @@ const hero = () => {
             "dark:[background-image:linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]"
           )}
         />
-        {/* Radial gradient for the container to give a faded look */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-        <p className="z-20 bg-gradient-to-b text-center from-neutral-200 to-neutral-200 bg-clip-text py-4 text-xl font-semibold text-transparent sm:text-4xl leading-snug">
-          Hi, I&apos;m{" "}
+        <p className="z-20 bg-gradient-to-b text-center from-neutral-200 to-neutral-200 bg-clip-text py-4 text-2xl font-semibold text-transparent sm:text-4xl leading-snug">
+          I help startups and teams build{" "}
           <span className="font-bold text-transparent bg-gradient-to-r from-purple-300 via-purple-400 to-purple-500 bg-clip-text transition duration-300 hover:brightness-125">
-            Hamza Mohammed{" "}
+            fast, scalable web apps{" "}
           </span>
-          a Full stack developer.
         </p>
 
         <TextGenerateEffect
-          className="text-leftb md:text-5xl lg:text-6xl text-2xl font-bold text-white text-center"
-          words="A spark of curiosity led me to tech—now I turn ideas into solutions."
+          className="text-leftb md:text-5xl lg:text-7xl text-3xl  text-white text-center"
+          words="From idea to production, I turn complex problems into real-world solutions."
         />
         <Link href="#about">
           <MagicButton
