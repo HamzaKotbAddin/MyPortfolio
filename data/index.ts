@@ -1,8 +1,8 @@
 export const gridItems = [
   {
     id: 1,
-    title: "UI that’s Clean, Fast, and Accessible",
-    description: "I build performant and responsive interfaces using React, Next.js, and Tailwind CSS—optimized for clarity and usability.",
+    title: "Interfaces People Enjoy Using",
+    description: "I make apps that load fast and feel simple to use. React, Next.js and Tailwind CSS help me do that.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -11,8 +11,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "Tech-Driven Collaboration",
-    description: "Version control, async workflows, and remote teamwork come naturally—Git, GitHub, Express, and agile communication are part of my daily workflow.",
+    title: "Teamwork That Works",
+    description: "I keep things organised with Git and GitHub and I like working with teams that share updates clearly.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -21,8 +21,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Full-Stack with a Front-End Focus",
-    description: "From semantic HTML and smooth UX to backend APIs with Express, MongoDB, and PostgreSQL—I bridge both sides with clean logic.",
+    title: "Full-Stack",
+    description: "I like building nice looking pages but I can also create APIs and connect databases like MongoDB or PostgreSQL.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -31,8 +31,8 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "From Figma to Vercel",
-    description: "I translate designs into production-ready code with clean Git workflows, pixel-perfect precision, and structured deploy pipelines.",
+    title: "From Idea to Live Site",
+    description: "I take a design from Figma and turn it into a working site with clean commits and smooth deployment.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -41,18 +41,17 @@ export const gridItems = [
   },
   {
     id: 5,
-    title: "Motion with Meaning",
-    description: "Using clean code, I craft subtle animations that guide users and elevate the experience without overdoing it.",
+    title: "Animations with Purpose",
+    description: "I add small animations that guide the user without making the page feel busy.",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/pexels-pixabay-270557.webp",
-    // spareImg: "/grid.svg",
   },
   {
     id: 6,
-    title: "Let’s Build Something That Matters",
-    description: "Have an idea or a challenge? I can help you bring it to life with modern, maintainable code and attention to detail.",
+    title: "Let’s Build Something",
+    description: "If you have an idea I can turn it into a working product with modern code and a clean design.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -69,46 +68,36 @@ export const Projects = [
   {
     id: 1,
     title: "Green Marketplace",
-    description: "A sustainable e-commerce platform built with Vite.js and Firebase.",
-    link: "https://green-marketplace-513bc.web.app/", 
+    description: "An online shop for eco-friendly products made with Vite.js and Firebase",
+    link: "https://green-marketplace-513bc.web.app/",
     image: "/marketplace.webp",
-    iconLists:["/re.svg", "/tail.svg", "/ts.svg", , "/fm.svg", "/firebase.svg", "/vite.svg",],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/firebase.svg", "/vite.svg"],
   },
   {
     id: 2,
     title: "Sentiment Analysis Tool",
-    description: "A sentiment analysis project using NLTK and RoBERTa to analyze text polarity and emotion.",
-    link: "https://github.com/HamzaKotbAddin/Sentiment_Analysis", 
+    description: "A tool that checks if text is positive, negative or neutral using NLTK and RoBERTa",
+    link: "https://github.com/HamzaKotbAddin/Sentiment_Analysis",
     image: "/sentiment-analysis.webp",
-    iconLists: [
-      "/python.svg",
-      "/nltk.webp",
-      "/pandas_mark.svg",
-    ],
+    iconLists: ["/python.svg", "/nltk.webp", "/pandas_mark.svg"],
   },
   {
     id: 3,
-    title: "AJA Space landing page",
-    description: "Contributed to front-end development using React and Next.js. Designed the UI in Figma.",
-    link: "https://aja-space-git-main-hamzakotbaddins-projects.vercel.app/", 
+    title: "AJA Space Landing Page",
+    description: "A front-end project built with React and Next.js. The design was made in Figma",
+    link: "https://aja-space-git-main-hamzakotbaddins-projects.vercel.app/",
     image: "/aja-space.webp",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/next.svg"],
   },
   {
     id: 4,
-    title: "Chatterly – Real-Time Chat App",
-    description: "A real-time chat app using Express, Next.js, and TypeScript with authentication, socket updates.",
+    title: "Real Time Chat App",
+    description: "A real-time chat app with Express, Next.js and TypeScript including login and live updates",
     link: "https://chatterly-ashen.vercel.app/",
     image: "/chat-app.webp",
-    iconLists: [
-      "/next.svg",
-      "/ts.svg",
-      "/tail.svg",
-
-    ],
+    iconLists: ["/next.svg", "/ts.svg", "/tail.svg"],
   },
 ];
-
 
 export const testimonials = [
   {
