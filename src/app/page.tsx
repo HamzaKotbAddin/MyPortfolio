@@ -27,12 +27,12 @@ export default function Home() {
             { name: "Clients", link: "#testimonials" },
             { name: "Experience", link: "#experience" },
             { name: "Contact", link: "#contact" },
-            {
-              name: "Resume",
-              link: "/Hamza_Yaseen_Software_CV.pdf",
-              target: "_blank",
-              rel: "noopener noreferrer",
-            },
+            // {
+            //   name: "Resume",
+            //   link: "/Hamza_Yaseen_Software_CV.pdf",
+            //   target: "_blank",
+            //   rel: "noopener noreferrer",
+            // },
           ]}
         />
 
