@@ -9,14 +9,14 @@ import { WavyBackground } from "./ui/wavy-background";
 
 const hero = () => {
   return (
-    <div className="w-full min-h-screen relative">
+    <div className=" w-full min-h-screen relative">
       {/* Spotlights */}
       <Spotlight
         className="absolute top-[-8rem] left-[5rem] md:top-[-10rem] md:left-[8rem] h-[100vh] w-full max-w-none"
         fill="white"
       />
       <Spotlight
-        className="absolute left-0 top-0 h-[80vh] w-[80vh]"
+        className="absolute left-0 top-0 h-[80vh] w-[80vh] "
         fill="purple"
       />
       <Spotlight
@@ -24,50 +24,36 @@ const hero = () => {
         fill="blue"
       />
 
-      <div className="relative flex h-screen w-full items-center justify-center dark:bg-black flex-col md:flex-row px-4 md:px-20">
-        {/* Text Section */}
-        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-          <p className="z-20 bg-gradient-to-b from-neutral-200 to-neutral-200 bg-clip-text py-4 text-2xl font-semibold text-transparent sm:text-4xl leading-snug">
-            I help startups and teams build{" "}
-            <span className="font-bold text-transparent bg-gradient-to-r from-purple-300 via-purple-400 to-purple-500 bg-clip-text transition duration-300 hover:brightness-125">
-              fast, scalable web apps{" "}
-            </span>
-          </p>
+      <div className="relative flex h-screen w-full items-center justify-center dark:bg-black flex-col ">
+        <div
+          className={cn(
+            "absolute inset-0",
+            "[background-size:40px_40px]",
+            "[background-image:linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)]",
+            "dark:[background-image:linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]"
+          )}
+        />
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+        <p className="z-20 bg-gradient-to-b text-center from-neutral-200 to-neutral-200 bg-clip-text py-4 text-2xl font-semibold text-transparent sm:text-4xl leading-snug">
+          I help startups and teams build{" "}
+          <span className="font-bold text-transparent bg-gradient-to-r from-purple-300 via-purple-400 to-purple-500 bg-clip-text transition duration-300 hover:brightness-125">
+            fast, scalable web apps{" "}
+          </span>
+        </p>
 
-          <TextGenerateEffect
-            className="text-left md:text-5xl lg:text-7xl text-3xl text-white z-100"
-            words="From idea to production, I turn complex problems into real-world solutions."
+        <TextGenerateEffect
+          className="text-leftb md:text-5xl lg:text-7xl text-3xl  text-white text-center"
+          words="From idea to production, I turn complex problems into real-world solutions."
+        />
+        <Link href="#about">
+          <MagicButton
+            title="About Me"
+            icon={<LuAntenna />}
+            position="right"
+            otherClasses="mt-10"
           />
-
-          <Link href="#about">
-            <MagicButton
-              title="About Me"
-              icon={<LuAntenna />}
-              position="right"
-              otherClasses="mt-10 z-100"
-            />
-          </Link>
-        </div>
-
-        {/* Image Section Placeholder */}
-        <div className="flex-1 hidden md:flex justify-center items-center">
-          <div className="w-48 h-48 bg-gray-700 rounded-full border-4 border-purple-400 flex items-center justify-center">
-            <span className="text-white font-semibold">Your Image</span>
-          </div>
-        </div>
+        </Link>
       </div>
-
-      {/* Grid overlay / mask */}
-      <div
-        className={cn(
-          "absolute inset-0",
-          "[background-size:40px_40px]",
-          "[background-image:linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)]",
-          "dark:[background-image:linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]"
-        )}
-      />
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-
       <WavyBackground
         className="content-container"
         containerClassName="main-container"
