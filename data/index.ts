@@ -141,7 +141,7 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Operations Supervisor",
+    title: "Merchandiser",
     desc: "Led logistics and team operations for Abar Water Factory. Improved staff efficiency and managed supply to 20+ stores.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
