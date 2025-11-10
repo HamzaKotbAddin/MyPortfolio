@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hamza Mohamed | Web Developer & AI Enthusiast",
+  title: "Hamza Mohamed Yasin | Software and AI Developer",
   description:
     "Explore the portfolio of Hamza Mohamed — showcasing projects in web development, AI, and creative technology using React, Next.js, and Firebase.",
   keywords: [
